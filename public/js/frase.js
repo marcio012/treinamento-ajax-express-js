@@ -5,8 +5,10 @@ function buscarFraseIdServidor() {
   $('#spinner').show()
   var fraseId = $('#input-id-frase').val()
   console.log(fraseId)
-  var dados = { id: fraseId }
-  $.get('http://localhost:3000/frases', dados, trocaFrasePorIdServidor)
+  var dados = {
+    id: fraseId
+  }
+  $.get('http://192.168.25.90:3000/frases', dados, trocaFrasePorIdServidor)
     .fail(() => {
       $('#error-server').show()
       setTimeout(() => {
@@ -31,14 +33,14 @@ function fraseAleatoria() {
   $('.frase').toggle()
   $('#spinner').show()
 
-  $.get('http://localhost:3000/frases', trocaFraseAleatoriaServidor)
-    .fail(function() {
+  $.get('http://192.168.25.90:3000/frases', trocaFraseAleatoriaServidor)
+    .fail(function () {
       $('#error-server').show()
-      setTimeout(function() {
+      setTimeout(function () {
         $('#error-server').toggle()
       }, 2000)
     })
-    .always(function() {
+    .always(function () {
       $('#spinner').hide()
     })
 }
