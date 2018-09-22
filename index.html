@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calcula Type</title>
+  <link rel="stylesheet" href="css/libs/materialize.min.css">
+  <link rel="stylesheet" href="css/libs/google-fonts.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="center">Calcula Type</h1>
+    <p class="frase center">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+      voluptate, sapiente, esse enim accusantium consequatur ex error sed, odio
+      harum alias ducimus. Libero possimus pariatur fugiat quis modi, iusto
+      earum!
+    </p>
+
+    <div class="center">
+      <img src="img/spinner.gif" alt="Spinner" id="spinner">
+      <p class="red-text" id="error-server">Ocorreu um erro, por favor tente
+        novamente.</p>
+    </div>
+
+    <ul class="informacoes center">
+      <li>
+        <i class="small material-icons icones">description</i>
+        <span id="tamanho-frase">00</span> palavras</li>
+      <li>
+        <i class="small material-icons icones">query_builder</i>
+        <span id="tempo-digitacao">3</span> segundos</li>
+    </ul>
+
+    <textarea class="campo-digitacao" name="name" id="" cols="30" rows="10"></textarea>
+
+
+    <div class="botoes">
+      <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar">
+        <i class="material-icons">restore</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light green" id="botao-placar">
+        <i class="material-icons">assignment</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light blue" id="botao-frase">
+        <i class="material-icons">shuffle</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light cyan" id="botao-frase-id">
+        <i class="material-icons">repeat_one</i>
+      </a>
+      <input clases="input_text" type="number" id="input-id-frase" min="0" />
+      <a class="btn-floating btn-large waves-effect waves-light orange" id="botao-sync">
+        <i class="material-icons">swap_vert</i>
+      </a>
+    </div>
+
+    <ul class="center">
+      <li><span id="contador-caracteres">00</span> caracteres</li>
+      <li><span id="contador-palavras">00</span> palavras</li>
+    </ul>
+
+
+    <section class="placar">
+      <h3 class="center">Placar</h3>
+      <table class="centered bordered">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Nº de palavras</th>
+            <th>Remover</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Tablela populada via ajax -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <footer class="page-footer">
+    <div class="container"></div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 Márcio Heleno
+      </div>
+    </div>
+    </div>
+
+  </footer>
+</body>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/materialize-css/dist/js/materialize.js"></script>
+<script src="js/main.js"></script>
+<script src="js/placar.js"></script>
+<script src="js/frase.js"></script>
+
+</html>
